@@ -1,0 +1,104 @@
+/* Contenitore centrato */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 25px;
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: #ffffff; /* Sfondo bianco per una sensazione pulita */
+    border-radius: 20px; /* Angoli arrotondati super morbidi */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Ombra intensa per profondità */
+    border: 1px solid #e2e2e2; /* Bordi sottili e luminosi per definire il contenitore */
+    transition: transform 0.3s ease-in-out; /* Transizione fluida per hover */
+}
+
+/* Effetto hover sul contenitore */
+.button-container:hover {
+    transform: translateY(-8px); /* Sollevamento del contenitore al passaggio del mouse */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); /* Ombra ancora più intensa per effetto hover */
+}
+
+/* Pulsante stilizzato */
+.styled-button {
+    background-color: #6C5B7B; /* Colore di sfondo sfumato, viola elegante */
+    color: white; /* Colore del testo bianco per contrasto */
+    border: none;
+    border-radius: 50px; /* Angoli iper arrotondati per un look futuristico */
+    padding: 16px 32px; /* Spaziatura interna ampia per un pulsante "comodo" */
+    font-size: 20px; /* Font più grande per una migliore visibilità */
+    font-weight: 700; /* Testo in grassetto */
+    text-transform: uppercase; /* Testo in maiuscolo per impatto visivo */
+    letter-spacing: 2px; /* Maggiore distanza tra le lettere per un look elegante */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transizioni fluide */
+    width: 280px; /* Larghezza fissa per uniformità */
+    text-align: center; /* Allineamento centrale del testo */
+    outline: none; /* Rimuove il contorno di default */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Leggera ombra per un effetto 3D */
+}
+
+/* Effetto hover sul pulsante */
+.styled-button:hover {
+    background-color: #355C7D; /* Colore blu-grigio più scuro al passaggio del mouse */
+    transform: translateY(-6px); /* Leggero sollevamento del pulsante */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombra più marcata */
+}
+
+/* Effetto focus (per accessibilità) */
+.styled-button:focus {
+    box-shadow: 0 0 0 4px rgba(108, 91, 123, 0.5); /* Contorno sfumato per accessibilità */
+}
+
+/* Aggiustamenti generali */
+body {
+    font-family: 'Roboto', sans-serif; /* Font moderno per un aspetto fresco */
+    background: linear-gradient(45deg, #f06, #ff9a9e); /* Sfondo gradiente per un look vibrante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.3s ease-in-out; /* Transizione fluida sul background */
+}
+
+/* Effetto dinamico sul body */
+body:hover {
+    background: linear-gradient(45deg, #ff9a9e, #f06); /* Invertito per un effetto interattivo */
+}
+
+/* Anima il pulsante con un effetto di onde quando cliccato */
+.styled-button:active {
+    animation: ripple 0.4s ease-out;
+}
+
+/* Animazione onda del pulsante */
+@keyframes ripple {
+    0% {
+        transform: scale(0.95);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+/* Animazione pulsante per effetto di "entrata" */
+@keyframes buttonEntrance {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Applicazione dell'animazione al caricamento della pagina */
+.styled-button {
+    animation: buttonEntrance 0.5s ease-out forwards;
+}

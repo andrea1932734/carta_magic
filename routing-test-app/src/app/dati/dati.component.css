@@ -1,0 +1,162 @@
+/* Contenitore principale della carta */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    background-color: #ffffff; /* Sfondo bianco per una sensazione pulita */
+    border-radius: 25px; /* Angoli iper arrotondati per un look futuristico */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1); /* Ombra morbida e profonda per una sensazione di leggerezza */
+    width: 100%;
+    max-width: 520px; /* Larghezza massima leggermente più ampia per un aspetto più spazioso */
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.4s ease, filter 0.3s ease; /* Aggiunta transizione per effetti di hover */
+}
+
+/* Effetto hover sulla carta */
+.card-container:hover {
+    transform: translateY(-10px); /* Sollevamento più evidente al passaggio del mouse */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15); /* Ombra accentuata per effetto 3D */
+    filter: brightness(105%); /* Leggero aumento della luminosità per un effetto visivo interessante */
+}
+
+/* Messaggio di caricamento */
+.loading-message {
+    font-size: 1.8em;
+    color: #333; /* Colore più scuro per contrasto */
+    font-weight: 700; /* Testo più audace */
+    animation: pulse 1.2s infinite ease-in-out; /* Animazione più fluida */
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Spaziatura tra le lettere per un look moderno */
+}
+
+/* Animazione del caricamento */
+@keyframes pulse {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0.4;
+        transform: scale(0.95);
+    }
+}
+
+/* Dettagli della carta */
+.card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Font più moderno */
+    margin-top: 20px;
+}
+
+/* Titolo della carta */
+.card-title {
+    font-size: 2.6em; /* Titolo più grande per maggiore impatto */
+    margin-bottom: 25px;
+    color: #2c3e50; /* Colore del titolo più scuro per contrasto */
+    font-weight: 800; /* Titolo più audace */
+    text-transform: uppercase; /* Testo in maiuscolo per un look più forte */
+    letter-spacing: 2px; /* Maggiore distanza tra le lettere per leggibilità */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombra sottile per effetto 3D */
+}
+
+/* Immagine della carta */
+.card-image {
+    max-width: 95%;
+    height: auto;
+    border-radius: 15px; /* Angoli più morbidi e arrotondati */
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Ombra leggera e diffusa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effetto hover sull'immagine */
+.card-image:hover {
+    transform: scale(1.08); /* Leggero ingrandimento con effetto zoom */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Ombra più accentuata */
+}
+
+/* Informazioni della carta */
+.card-info {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #666;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Stile per i dettagli della carta */
+.card-info p {
+    margin: 10px 0;
+    color: #555;
+    text-align: justify;
+}
+
+/* Evidenziare il testo */
+.card-info strong {
+    color: #e74c3c; /* Colore accento rosso per evidenziare */
+    font-weight: 700;
+}
+
+/* Aggiunta di un bordo inferiore per separare le informazioni */
+.card-info {
+    border-top: 2px solid #eee;
+    padding-top: 25px;
+}
+
+/* Pulsante nella carta (se presente) */
+.card-button {
+    background-color: #3498db; /* Blu brillante */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Angoli più arrotondati per un look più moderno */
+    padding: 14px 32px; /* Più spazio interno per un pulsante più grande */
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ombra per il pulsante */
+}
+
+/* Effetto hover sul pulsante */
+.card-button:hover {
+    background-color: #2980b9; /* Colore più scuro al passaggio del mouse */
+    transform: translateY(-4px); /* Leggero sollevamento */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Ombra più intensa */
+}
+
+/* Effetto focus sul pulsante (per accessibilità) */
+.card-button:focus {
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); /* Contorno blu per accessibilità */
+}
+
+/* Aggiunta di un effetto "onda" al clic del pulsante */
+.card-button:active {
+    animation: ripple 0.4s ease-out;
+}
+
+/* Animazione onda del pulsante */
+@keyframes ripple {
+    0% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
